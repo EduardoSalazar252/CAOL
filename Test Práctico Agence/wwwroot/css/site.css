@@ -1,0 +1,401 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1:focus {
+    outline: none;
+}
+
+a, .btn-link {
+    color: #0071c1;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::after {
+        content: "An error has occurred."
+    }
+
+/*--------------------------*/
+/*----Clases Custom CAOL----*/
+/*--------------------------*/
+.index-ul {
+    font-size: 1rem;
+}
+
+.seccion-select select {
+    width: 100%;
+}
+
+.body-inner-container {
+    width: 100%;
+}
+
+.body-container-inner {
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    bottom: 0;
+    width: 95%;
+    height: 100%;
+    padding: 1%;
+}
+
+.navbar-inner-top-container {
+    width: auto;
+}
+
+.navbar-inner-bot-container {
+    display: block;
+    width: 70%
+}
+
+.nav-left-side-container {
+    float: left;
+    height: 100%;
+    width: 90%;
+}
+
+.top-inner-container {
+    height: 50%;
+    width: 100%;
+    float: left;
+}
+
+.top-inner-border {
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+.inner-style-navbar-container {
+    width: 100%;
+    float: left;
+    height: 50%;
+}
+
+.inner-border-navbar-container {
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.index-top-container {
+    width: 100%;
+    height: 40px;
+}
+
+.index-middle-container {
+    display: inline-block;
+    width: 100%;
+    padding: 1%;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.index-bottom-container {
+    display: table;
+    width: 100%;
+    height: 50px;
+    border: 1px solid lightgray; 
+    padding: 1%;
+}
+.graph-display {
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    width: 60%;
+    height:100%;
+}
+.middle-inner-container {
+    width: 85%;
+    height: auto;
+    position: relative;
+    float: left;
+}
+
+.middle-seccion-derecha {
+    width: 15%;
+    height: 100%;
+    float: left;
+    text-align: end;
+    display: table;
+}
+
+.display-titulo {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.middle-seccion-centro {
+    width: 85%;
+    height: 100%;
+    float: left;
+    padding-left: 2%;
+}
+
+.seccion-palabra-container {
+    height: 100%;
+    float: left;
+    text-align: end;
+    display: table;
+    margin-left: 0.5%;
+    margin-right: 0.5%
+}
+
+    .seccion-palabra-container div {
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+
+.secciones-subcontainer {
+    width: 83%;
+    float: right;
+}
+
+.seccion-fill {
+    width: 100%;
+    height: 100%;
+}
+
+.seccion-fill-subcontainer-20 {
+    height: 20%;
+}
+
+.seccion-fill-subcontainer-80 {
+    height: 80%;
+    margin-top: 1%;
+}
+
+.seccion-lista-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    float: left;
+    border-radius: 4px;
+}
+
+.secciones-right-container div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width:1020px) {
+    
+    .top-left-side-container {
+        height: 40px;
+        float: left;
+        width: 100%;
+        padding-left: 1%;
+    }
+
+    .nav-right-side-container {
+        float: left;
+        height: 100%;
+        width: 30%;
+    }
+    
+    .body-container-style {
+        border-left: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        margin-left: 1%;
+        float: left;
+        width: 98%;
+    }
+    
+    .mainLayout-top-container {
+        height: auto;
+    } 
+
+    .navbar-inner-top-container a {
+        width: 50%;
+        float: left;
+    }
+    
+    .navbar-inner-container {
+        width: 100%;
+        flex-grow: 0;
+        float: left;
+    }
+    
+    .mainLayout-bot-container {
+        float: left;
+        padding: 1%;
+        border-right: 1px solid lightgray;
+    }
+    
+    .seccion-select {
+        float: left;
+        width: 47%;
+    }
+    
+    .secciones-container {
+        width: 100%;
+    }
+    
+    .secciones-container2 {
+        width: 100%;
+    }
+    
+    .middle-seccion-centro2 {
+        width: 100%;
+        height: 100%;
+        float: left;
+        padding: 1% 0% 1% 2%;
+    }
+    
+    .seccion-fill-subcontainer {
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
+    
+    .secciones-right-container {
+        width: 100%;
+        float: left;
+        text-align: center;
+        display: table;
+    }
+        
+        .secciones-right-container button {
+            width: 60%;
+            justify-content: start;
+            margin-bottom: 5%;
+        }
+
+    .seccion-margin-4 {
+        margin-left: 0;
+    }
+
+}
+
+@media only screen and (min-width:1021px) {
+    .top-left-side-container {
+        height: 40px;
+        float: left;
+        width: 100%;
+        padding-left: 1%;
+    }    
+
+    .nav-right-side-container {
+        float: left;
+        height: 100%;
+        width: 10%;
+    }
+
+    .body-container-style {
+        border-left: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        margin-left: 1%;
+        float: left;
+        width: 95%;
+    }
+
+    .mainLayout-top-container {
+        height: 40px;
+    }
+
+    .navbar-inner-container {
+        width: 100%;
+        flex-grow: 0;
+    }
+
+    .mainLayout-bot-container {
+        padding: 1%;
+        border-right: 1px solid lightgray;
+    }
+
+    .seccion-select {
+        float: left;
+        width: 11%;
+    }
+
+    .secciones-container {
+        width: 100%;
+        height: 40px;
+    }
+
+    .secciones-container2 {
+        width: 100%;
+        height: 240px;
+    }
+
+    .middle-seccion-centro2 {
+        width: 85%;
+        height: 100%;
+        float: left;
+        padding: 1% 0% 1% 2%;
+    }
+
+    .seccion-fill-subcontainer {
+        width: 48%;
+        height: 100%;
+        float: left;
+    }
+
+    .secciones-right-container {
+        width: 15%;
+        height: 280px;
+        float: left;
+        text-align: center;
+        display: table;
+    }
+        
+        .secciones-right-container button {
+            width: 70%;
+            justify-content: start;
+            margin-bottom: 5%;
+        }
+
+    .seccion-margin-4 {
+        margin-left: 4%;
+    }
+
+}
+    
+
+  
