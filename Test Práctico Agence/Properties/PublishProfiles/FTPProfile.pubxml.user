@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPndz/INmE0mTRTdfltZTNAAAAAACAAAAAAADZgAAwAAAABAAAABLIK+vdoHMG8mkGdTauZSlAAAAAASAAACgAAAAEAAAAJ19hwYQcZXv7GWu5Z5+otsgAAAAy/VCSzXqULjDQDuyXhnUclSrnQr/n4Kl8xX+hfQcP5YUAAAAb4QcYmVT4kRs7vsWWgmuvQprs+c=</EncryptedPassword>
+    <_PublishTargetUrl>ftp://win8011.site4now.net/caol</_PublishTargetUrl>
+    <History>True|2022-11-02T18:13:17.4563845Z;True|2022-11-02T13:03:10.1335745-04:00;False|2022-11-02T12:44:50.0211156-04:00;False|2022-11-02T12:08:39.4928082-04:00;False|2022-11-02T02:06:03.9039072-04:00;True|2022-11-02T01:50:09.9088641-04:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>10/17/2022 10:06:05</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>11/02/2022 00:26:33</publishTime>
+    </File>
+    <File Include="BouncyCastle.Crypto.dll">
+      <publishTime>10/19/2021 07:53:34</publishTime>
+    </File>
+    <File Include="ChartJs.Blazor.dll">
+      <publishTime>01/11/2021 03:54:22</publishTime>
+    </File>
+    <File Include="Dapper.dll">
+      <publishTime>11/03/2021 10:07:40</publishTime>
+    </File>
+    <File Include="DataLibrary.dll">
+      <publishTime>11/02/2022 12:06:09</publishTime>
+    </File>
+    <File Include="DataLibrary.pdb">
+      <publishTime>11/02/2022 12:06:09</publishTime>
+    </File>
+    <File Include="Google.Protobuf.dll">
+      <publishTime>01/28/2022 04:49:18</publishTime>
+    </File>
+    <File Include="K4os.Compression.LZ4.dll">
+      <publishTime>09/11/2020 21:11:58</publishTime>
+    </File>
+    <File Include="K4os.Compression.LZ4.Streams.dll">
+      <publishTime>09/11/2020 21:11:58</publishTime>
+    </File>
+    <File Include="K4os.Hash.xxHash.dll">
+      <publishTime>07/03/2019 16:39:02</publishTime>
+    </File>
+    <File Include="libman.json">
+      <publishTime>11/02/2022 00:28:44</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>09/26/2022 18:57:02</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>09/26/2022 18:57:30</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>09/26/2022 18:57:46</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.Caching.Memory.dll">
+      <publishTime>01/14/2022 15:54:16</publishTime>
+    </File>
+    <File Include="Microsoft.Extensions.DependencyInjection.dll">
+      <publishTime>09/26/2022 13:42:22</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.SystemEvents.dll">
+      <publishTime>11/15/2019 04:36:56</publishTime>
+    </File>
+    <File Include="MySql.Data.dll">
+      <publishTime>09/09/2022 10:08:02</publishTime>
+    </File>
+    <File Include="MySqlConnector.dll">
+      <publishTime>08/26/2022 10:42:18</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>11/08/2019 20:56:44</publishTime>
+    </File>
+    <File Include="Pomelo.EntityFrameworkCore.MySql.dll">
+      <publishTime>07/24/2022 06:24:54</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>11/15/2019 04:56:36</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll">
+      <publishTime>11/15/2019 04:54:18</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll">
+      <publishTime>11/15/2019 04:54:20</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll">
+      <publishTime>11/15/2019 04:54:30</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>07/19/2017 06:01:34</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>11/20/2017 14:09:04</publishTime>
+    </File>
+    <File Include="System.Drawing.Common.dll">
+      <publishTime>09/18/2018 15:38:14</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>07/19/2017 06:01:34</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>11/15/2019 04:56:44</publishTime>
+    </File>
+    <File Include="System.Windows.Extensions.dll">
+      <publishTime>11/15/2019 04:56:52</publishTime>
+    </File>
+    <File Include="Test Práctico Agence.deps.json">
+      <publishTime>11/02/2022 13:43:52</publishTime>
+    </File>
+    <File Include="Test Práctico Agence.dll">
+      <publishTime>11/02/2022 13:43:47</publishTime>
+    </File>
+    <File Include="Test Práctico Agence.exe">
+      <publishTime>11/02/2022 13:43:47</publishTime>
+    </File>
+    <File Include="Test Práctico Agence.pdb">
+      <publishTime>11/02/2022 13:43:47</publishTime>
+    </File>
+    <File Include="Test Práctico Agence.runtimeconfig.json">
+      <publishTime>11/02/2022 12:06:24</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>11/02/2022 13:43:53</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/bulma.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/css/bulma-rtl.css">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/css/bulma-rtl.css.map">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/css/bulma-rtl.min.css">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/css/bulma.css">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/css/bulma.css.map">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/css/bulma.min.css">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/LICENSE">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/package.json">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/README.md">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/base/animations.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/base/generic.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/base/helpers.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/base/minireset.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/base/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/breadcrumb.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/card.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/dropdown.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/level.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/media.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/menu.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/message.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/modal.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/navbar.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/pagination.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/panel.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/tabs.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/components/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/box.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/button.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/container.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/content.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/form.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/icon.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/image.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/notification.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/other.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/progress.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/table.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/tag.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/title.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/elements/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/checkbox-radio.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/file.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/input-textarea.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/select.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/shared.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/tools.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/form/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/grid/columns.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/grid/tiles.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/grid/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/color.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/flexbox.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/float.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/other.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/overflow.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/position.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/spacing.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/typography.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/visibility.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/helpers/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/layout/footer.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/layout/hero.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/layout/section.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/layout/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/animations.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/controls.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/derived-variables.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/extends.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/functions.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/initial-variables.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/mixins.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/bulma/sass/utilities/_all.sass">
+      <publishTime>11/02/2022 00:28:52</publishTime>
+    </File>
+    <File Include="wwwroot/ChartJsBlazorInterop.js">
+      <publishTime>01/11/2021 03:28:00</publishTime>
+    </File>
+    <File Include="wwwroot/css/site.css">
+      <publishTime>10/25/2022 11:24:55</publishTime>
+    </File>
+    <File Include="wwwroot/css/ToastNotification.css">
+      <publishTime>11/01/2022 23:37:28</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>10/17/2022 10:06:06</publishTime>
+    </File>
+    <File Include="wwwroot/img/logo.gif">
+      <publishTime>04/12/2006 15:14:22</publishTime>
+    </File>
+    <File Include="wwwroot/less/CAOL.css">
+      <publishTime>10/19/2022 22:33:49</publishTime>
+    </File>
+    <File Include="wwwroot/less/CAOL.less">
+      <publishTime>10/07/2022 10:36:46</publishTime>
+    </File>
+    <File Include="wwwroot/less/CAOL.min.css">
+      <publishTime>10/19/2022 22:33:49</publishTime>
+    </File>
+    <File Include="wwwroot/less/scrollbar.less">
+      <publishTime>10/19/2022 22:33:49</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/CHANGELOG.md">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/dist/css/bulma-pageloader.min.css">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/dist/css/bulma-pageloader.sass">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/LICENSE">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/package.json">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/README.md">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma-pageloader/src/sass/index.sass">
+      <publishTime>11/02/2022 00:29:19</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/bulma.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/css/bulma-rtl.css">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/css/bulma-rtl.css.map">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/css/bulma-rtl.min.css">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/css/bulma.css">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/css/bulma.css.map">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/css/bulma.min.css">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/LICENSE">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/package.json">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/README.md">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/base/animations.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/base/generic.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/base/helpers.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/base/minireset.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/base/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/breadcrumb.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/card.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/dropdown.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/level.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/media.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/menu.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/message.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/modal.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/navbar.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/pagination.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/panel.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/tabs.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/components/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/box.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/button.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/container.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/content.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/form.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/icon.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/image.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/notification.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/other.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/progress.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/table.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/tag.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/title.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/elements/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/checkbox-radio.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/file.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/input-textarea.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/select.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/shared.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/tools.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/form/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/grid/columns.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/grid/tiles.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/grid/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/color.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/flexbox.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/float.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/other.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/overflow.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/position.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/spacing.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/typography.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/visibility.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/helpers/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/layout/footer.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/layout/hero.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/layout/section.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/layout/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/animations.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/controls.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/derived-variables.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/extends.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/functions.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/initial-variables.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/mixins.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/bulma/sass/utilities/_all.sass">
+      <publishTime>10/18/2022 11:25:20</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/css/materialdesignicons.css">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/css/materialdesignicons.css.map">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/css/materialdesignicons.min.css">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/css/materialdesignicons.min.css.map">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/fonts/materialdesignicons-webfont.eot">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/fonts/materialdesignicons-webfont.ttf">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/fonts/materialdesignicons-webfont.woff">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/fonts/materialdesignicons-webfont.woff2">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/LICENSE">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/package.json">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/preview.html">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/README.md">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scripts/verify.js">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scripts/verify.min.js">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/materialdesignicons.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_animated.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_core.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_extras.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_functions.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_icons.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_path.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/lib/mdi/font/scss/_variables.scss">
+      <publishTime>10/18/2022 11:26:01</publishTime>
+    </File>
+    <File Include="wwwroot/Test Práctico Agence.styles.css">
+      <publishTime>11/02/2022 01:21:44</publishTime>
+    </File>
+    <File Include="wwwroot/_content/ChartJs.Blazor.Fork/ChartJsBlazorInterop.js">
+      <publishTime>01/11/2021 03:28:00</publishTime>
+    </File>
+    <File Include="ZstdNet.dll">
+      <publishTime>09/09/2022 10:03:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

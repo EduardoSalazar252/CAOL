@@ -1,0 +1,56 @@
+﻿<nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <div id="navbarBasicExample" class="navbar-menu is-active navbar-inner-container">
+        <div class="navbar-start navbar-inner-top-container">
+
+            <a class="navbar-item">
+                <span class="icon is-small"><i class="mdi mdi-home" aria-hidden="true"></i></span>
+                <span>Agence</span>
+            </a>
+
+            <a class="navbar-item">
+                <span class="icon is-small"><i class="mdi mdi-clipboard-check" aria-hidden="true"></i></span>
+                <span>Projetos</span>
+            </a>
+
+            <a class="navbar-item">
+                <span class="icon is-small"><i class="mdi mdi-file-document" aria-hidden="true"></i></span>
+                <span>Administrativo</span>
+            </a>
+
+            <a class="navbar-item">
+                <span class="icon is-small"><i class="mdi mdi-account-multiple" aria-hidden="true"></i></span>
+                <span>Comercial</span>
+            </a>
+            <a class="navbar-item">
+                <span class="icon is-small"><i class="mdi mdi-file-chart" aria-hidden="true"></i></span>
+                <span>Financeiro</span>
+            </a>
+
+            <a class="navbar-item">
+                <span class="icon is-small"><i class="mdi mdi-account" aria-hidden="true"></i></span>
+                <span>Usuário</span>
+            </a>
+            <a class="navbar-item" style="color:red">
+                <span class="icon is-small"><i class="mdi mdi-exit-to-app" aria-hidden="true"></i></span>
+                <span>Salir</span>
+            </a>
+
+        </div>
+        <div class="navbar-end navbar-inner-bot-container">
+            <div class="inner-style-navbar-container "></div>
+            <div class="inner-style-navbar-container inner-border-navbar-container"></div>
+        </div>
+    </div>
+
+</nav>
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

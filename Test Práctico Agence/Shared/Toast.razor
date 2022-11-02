@@ -1,0 +1,10 @@
+@inherits ToastBase
+@inject ToastService toastService
+
+<div class="toast @(IsVisible ? "toast-visible" : null) @BackgroundCssClass">
+    <button class="delete" @onclick="@(() => toastService.HideToast())"></button>
+    <div class="toast-body">
+        <h5>@Heading</h5>
+        <p>@((MarkupString)Message)</p>
+    </div>
+</div>

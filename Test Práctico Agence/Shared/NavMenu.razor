@@ -1,0 +1,27 @@
+﻿<nav class="navbar top-left-side-container" role="navigation" aria-label="main navigation">
+
+    <div class="nav-left-side-container">
+        <div class="top-inner-container"></div>
+        <div class="top-inner-container top-inner-border"></div>
+    </div>
+   
+    <div class="nav-right-side-container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://www.agence.com.br/">
+                <img src="img/logo.gif" alt="logo">
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

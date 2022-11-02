@@ -1,0 +1,830 @@
+﻿@page "/"
+@inject Funciones _fc
+@inject ToastService toastService
+
+<PageTitle>CAOL - @_descripcionTabla</PageTitle>
+
+@if (isLoading)
+{
+    <div class="pageloader is-active"><span class="title">Cargando...</span></div>
+}
+else
+{
+    <div class="container">
+        <div class="table-container">
+
+            @*---Container de las tabulaciones---*@
+            <div class="index-top-container">
+                <div class="tabs is-boxed">
+                    <ul class="index-ul">
+                        @if (isClicked)
+                        {
+                            <li class="is-active">
+                                <a>Por Consultor</a>
+                            </li>
+                            <li>
+                                <a @onclick="@TabSeleccion">Por Cliente</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a @onclick="@TabSeleccion"> Por Consultor</a>
+                            </li>
+                            <li class="is-active">
+                                <a>Por Cliente</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            @*---Container de la sección de busqueda, selección y botones---*@
+            <div class="index-middle-container">
+                @*---Container derecho---*@
+                <div class="middle-inner-container">
+                    @*---Container del Periodo---*@
+                    <div class="secciones-container">
+                        <div class="middle-seccion-derecha">
+                            <div class="display-titulo">
+                                Período
+                            </div>
+                        </div>
+                        <div class="middle-seccion-centro">
+                            <div class="select is-normal seccion-select">
+                                <select @onchange="HandleMesInicio">
+                                    @if (_PeriodoMesInicio.Count > 0)
+                                    {
+                                        foreach (var pmi in _PeriodoMesInicio)
+                                        {
+                                            <option value="@pmi.Mes_Numero">@pmi.Mes_Sigla</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="select is-normal seccion-select" style="margin-left:1%;">
+                                <select @onchange="HandleYearInicio">
+                                    @if (_PeriodoMesInicio.Count > 0)
+                                    {
+                                        foreach (var pyi in _PeriodoYearInicio)
+                                        {
+                                            <option value="@pyi">@pyi</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="seccion-palabra-container">
+                                <div>
+                                    a
+                                </div>
+                            </div>
+                            <div class="select is-normal seccion-select">
+                                <select @onchange="HandleMesFin">
+                                    @if (_PeriodoMesInicio.Count > 0)
+                                    {
+                                        foreach (var pmf in _PeriodoMesFin)
+                                        {
+                                            <option value="@pmf.Mes_Numero">@pmf.Mes_Sigla</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="select is-normal seccion-select" style="margin-left:1%;">
+                                <select @onchange="HandleYearFin">
+                                    @if (_PeriodoMesInicio.Count > 0)
+                                    {
+                                        foreach (var pyf in _PeriodoYearFin)
+                                        {
+                                            <option value="@pyf">@pyf</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*---Container de las tablas---*@
+                    <div class="secciones-container2">
+                        <div class="middle-seccion-derecha">
+                            <div class="display-titulo">
+                                @_descripcionTabla
+                            </div>
+                        </div>
+
+                        <div class="middle-seccion-centro2">
+                            <div class="seccion-fill">
+
+                                <div class=" seccion-fill-subcontainer">
+                                    <div class="seccion-fill-subcontainer-20">
+                                        <div class="field is-horizontal">
+                                            <div class="field-body">
+                                                <div class="field is-expanded">
+                                                    <div class="field has-addons">
+                                                        <p class="control is-expanded">
+                                                            <input class="input" @bind-value="SearchTerm" @bind-value:event="oninput" placeholder="Digite nome" />
+                                                        </p>
+                                                        <p class="control">
+                                                            <a class="button is-static">
+                                                                <span class="icon is-small is-right">
+                                                                    <i class="mdi mdi-magnify"></i>
+                                                                </span>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="seccion-fill-subcontainer-80">
+                                        <div class="seccion-lista-container">
+                                            <div class="select is-multiple seccion-fill">
+                                                <select multiple size="8" name="list1" id="list1" class="seccion-fill" style="border:none; overflow: auto;height: 100%;">
+                                                    @if (_descripcionTabla == "Consultores")
+                                                    {
+                                                        @if (_Consultores.Count > 0)
+                                                        {
+                                                            foreach (var fcl in FiltradoConsultores)
+                                                            {
+                                                                <option value="@fcl.Usuario_co" @onclick="eventArgs => { HandleSelection(fcl, 0); }">@fcl.Usuario_no</option>
+                                                            }
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (_Clientes.Count > 0)
+                                                        {
+
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" seccion-fill-subcontainer seccion-margin-4">
+                                    <div class="seccion-fill-subcontainer-20">
+                                        <div class="field is-horizontal">
+                                            <div class="field-body">
+                                                <div class="field is-expanded">
+                                                    <div class="field has-addons">
+                                                        <p class="control is-expanded">
+                                                            <input class="input" @bind-value="SearchTerm2" @bind-value:event="oninput" placeholder="Digite nome" />
+                                                        </p>
+                                                        <p class="control">
+                                                            <a class="button is-static">
+                                                                <span class="icon is-small is-right">
+                                                                    <i class="mdi mdi-magnify"></i>
+                                                                </span>
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="seccion-fill-subcontainer-80">
+                                        <div class="seccion-lista-container">
+                                            <div class="select is-multiple seccion-fill">
+                                                <select multiple size="8" name="list1" id="list1" class="seccion-fill" style="border:none; overflow: auto;height: 100%;">
+                                                    @if (_descripcionTabla == "Consultores")
+                                                    {
+                                                        @if (tempConsultores.Count > 0)
+                                                        {
+                                                            foreach (var ftcl in FiltradotempConsultores)
+                                                            {
+                                                                <option value="@ftcl.Usuario_co" @onclick="eventArgs => { HandleSelection(ftcl, 1); }">@ftcl.Usuario_no</option>
+                                                            }
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        @if (tempClientes.Count > 0)
+                                                        {
+
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @*---Container izquierdo---*@
+                <div class="secciones-right-container">
+
+                    @*---Container de los botones funcionales---*@
+                    <div>
+                        @*---Botón Relatório---*@
+                        <button class="button" @onclick="eventArgs => { HandleBtnSeleccion(0); }">
+                            <span class="icon">
+                                <i class="mdi mdi-table-large"></i>
+                            </span>
+                            <span>Relatório</span>
+                        </button>
+                        @*---Botón Gráfico---*@
+                        <button class="button" @onclick="eventArgs => { HandleBtnSeleccion(1); }">
+                            <span class="icon">
+                                <i class="mdi mdi-chart-bar"></i>
+                            </span>
+                            <span>Gráfico</span>
+                        </button>
+                        @*---Botón Pizza---*@
+                        <button class="button" @onclick="eventArgs => { HandleBtnSeleccion(2); }">
+                            <span class="icon">
+                                <i class="mdi mdi-chart-pie"></i>
+                            </span>
+                            <span>Pizza</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            @*---Container de la sección de Relatório, Gráfico y Pizza---*@
+            <div class="index-bottom-container">
+                <div class="graph-display">
+                    @if (isRelatorio)
+                    {
+                        @if (data_Usuarios.Count > 0)
+                        {
+                            foreach (var du in data_Usuarios)
+                            {
+                                <div class="table-container">
+                                    <table class="table is-bordered is-fullwidth">
+                                        <thead style="background-color:lightgray;">
+                                            <tr style="background-color:lightgray;font-weight:bold;">
+                                                <th style=" text-align:left">@du.D_usuario.Usuario_no</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+
+
+                                        </thead>
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align:center">Período</th>
+                                                <th style="text-align:center">Receita Líquida</th>
+                                                <th style="text-align:center">Custo Fixo</th>
+                                                <th style="text-align:center">Comissão</th>
+                                                <th style="text-align:center">Lucro</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @if (du.D_monetario.Count > 0)
+                                            {
+                                                float p_total_RL = 0;
+                                                float p_total_CF = 0;
+                                                float p_total_CO = 0;
+                                                float p_total_LU = 0;
+                                                foreach (var dudm in du.D_monetario)
+                                                {
+                                                    p_total_RL = p_total_RL + dudm.Periodo_Recetaliquida;
+                                                    p_total_CF = p_total_CF + du.D_custofijo;
+                                                    p_total_CO = p_total_CO + dudm.Periodo_Comision;
+                                                    p_total_LU = p_total_LU + dudm.Periodo_Lucro;
+                                                    <tr>
+                                                        <td style="text-align:left">@dudm.Periodo_Mes</td>
+                                                        @if (dudm.Periodo_Recetaliquida < 0)
+                                                        {
+                                                            <td style="text-align:right; color:red">R$ @dudm.Periodo_Recetaliquida</td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="text-align:right">R$ @dudm.Periodo_Recetaliquida</td>
+                                                        }
+                                                        <td style="text-align:right">R$ @du.D_custofijo</td>
+                                                        @if (dudm.Periodo_Comision < 0)
+                                                        {
+                                                            <td style="text-align:right; color:red">R$ @dudm.Periodo_Comision</td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="text-align:right">R$ @dudm.Periodo_Comision</td>
+                                                        }
+                                                        @if (dudm.Periodo_Lucro < 0)
+                                                        {
+                                                            <td style="text-align:right; color:red">R$ @dudm.Periodo_Lucro</td>
+                                                        }
+                                                        else
+                                                        {
+                                                            <td style="text-align:right">R$ @dudm.Periodo_Lucro</td>
+                                                        }
+                                                    </tr>
+                                                }
+                                                <tr style="background-color:lightgray">
+                                                    <td style="font-weight:bold; text-align:left">SALDO</td>
+                                                    @if (p_total_RL < 0)
+                                                    {
+                                                        <td style="text-align:right; color:red">R$ @p_total_RL</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td style="text-align:right">R$ @p_total_RL</td>
+                                                    }
+                                                    @if (p_total_CF < 0)
+                                                    {
+                                                        <td style="text-align:right; color:red">R$ @p_total_CF</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td style="text-align:right">R$ @p_total_CF</td>
+                                                    }
+                                                    @if (p_total_CO < 0)
+                                                    {
+                                                        <td style="text-align:right; color:red">R$ @p_total_CO</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td style="text-align:right">R$ @p_total_CO</td>
+                                                    }
+                                                    @if (p_total_LU < 0)
+                                                    {
+                                                        <td style="text-align:right; color:red">R$ @p_total_LU</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td style="text-align:right; color:blue">R$ @p_total_LU</td>
+                                                    }
+                                                </tr>
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            }
+                        }
+                        else
+                        {
+                            <span style="color:red">Não foram encontrados registros para o período selecionado.</span>
+                        }
+                    }
+                    @if (isGrafico)
+                    {
+                        <ChartJs.Blazor.Chart Config="_configBar"></ChartJs.Blazor.Chart>
+                    }
+                    @if (isPizza)
+                    {
+                        <ChartJs.Blazor.Chart Config="_configPie"></ChartJs.Blazor.Chart>
+                    }
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+}
+
+
+@code {
+    //-------------------------------------------------------------
+    //Aquí se declaran las variables globales
+    //-------------------------------------------------------------
+    private bool isLoading = true;
+
+    private bool isClicked = true;
+
+    private bool isRelatorio = false;
+
+    private bool isGrafico = false;
+
+    private bool isPizza = false;
+
+    private string _descripcionTabla = "Consultores";
+
+    List<Data_Usuario> data_Usuarios = new();
+
+    private int identificador;
+
+    //-------------------------------------------------------------
+    //Aquí se declaran las variables utilizadas para el periodo
+    //-------------------------------------------------------------
+    private List<Info_Mes> _PeriodoMesInicio = new();
+
+    private List<Info_Mes> _PeriodoMesFin = new();
+
+    private List<int> _PeriodoYearInicio = new();
+
+    private List<int> _PeriodoYearFin = new();
+
+    private Data_Periodo _PeriodoInicio = new();
+
+    private Data_Periodo _PeriodoFin = new();
+
+    private Info_Periodos PeriodoSeleccionado = new();
+
+    //-------------------------------------------------------------
+    //Aquí se declaran las variables utilizadas para la lista de 
+    //cobsultores
+    //-------------------------------------------------------------
+    private List<Info_Usuario> _Consultores = new();
+
+    private List<Info_Usuario> tempConsultores = new();
+
+    //-------------------------------------------------------------
+    //Aquí se declaran las variables utilizadas para los searchbar
+    //-------------------------------------------------------------
+    private string SearchTerm { get; set; } = "";
+
+    private string SearchTerm2 { get; set; } = "";
+
+    //-------------------------------------------------------------
+    //Aquí se declaran las variables utilizadas para los gráficos
+    //-------------------------------------------------------------
+    private BarConfig _configBar;
+
+    private PieConfig _configPie;
+
+    //-------------------------------------------------------------
+    //Aquí se declaran las variables utilizadas para los clientes
+    //-------------------------------------------------------------
+    private List<string> _Clientes = new();
+
+    private List<string> tempClientes = new();
+
+    //-------------------------------------------------------------
+    //Aquí se gestiona la lógica del ingreso a la página
+    //-------------------------------------------------------------
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string sql = "SELECT * FROM cao_usuario as A INNER JOIN permissao_sistema as B WHERE A.co_usuario = B.co_usuario AND B.co_sistema = 1 AND B.in_ativo = 'S' AND (B.co_tipo_usuario = 0 OR B.co_tipo_usuario = 1 OR B.co_tipo_usuario = 2)";
+            _Consultores = await _fc.GetListaUsuarios(sql);
+
+            if (_Consultores.Count > 0)
+            {
+                //Aquí se obtienen las listas de los meses a mostrar en los select del Periodo
+                _PeriodoMesInicio = _fc.GetListaMeses();
+                _PeriodoMesFin = _fc.GetListaMeses();
+
+                //Aquí se obtienen las listas de los años a mostrar en los select del Periodo
+                _PeriodoYearInicio = _fc.GetListaAnos();
+                _PeriodoYearFin = _fc.GetListaAnos();
+
+                _PeriodoInicio = new Data_Periodo()
+                    {
+                        D_mes = _PeriodoMesInicio.First().Mes_Numero,
+                        D_year = _PeriodoYearInicio.First()
+                    };
+                _PeriodoFin = new Data_Periodo()
+                    {
+                        D_mes = _PeriodoMesFin.First().Mes_Numero,
+                        D_year = _PeriodoYearFin.First()
+                    };
+
+                //Aquí se obtienen los meses de inicio y fin default
+                PeriodoSeleccionado = _fc.GeneradorFechasInicioFin(_PeriodoInicio.D_year, _PeriodoInicio.D_mes, _PeriodoFin.D_year, _PeriodoFin.D_mes);
+                isLoading = false;
+            }
+            else
+            {
+                isLoading = false;
+                //Mensaje indicando que no se encontro ningún colaborador que cumpla con los requisitos
+                string exceptionerror = "No se encontro ningún colaborador que cumpla con los requisitos";
+                toastService.ShowToast(exceptionerror, ToastLevel.Error);
+            }
+        }
+        catch (Exception ex)
+        {
+            isLoading = false;
+            string exceptionerror = "Se produjo un error <br/>Error: " + ex.Message;
+            toastService.ShowToast(exceptionerror, ToastLevel.Error);
+            throw;
+        }
+    }
+
+    //-------------------------------------------------------------
+    //Aquí se gestiona la selección de las tabulaciones
+    //-------------------------------------------------------------
+    private void TabSeleccion()
+    {
+        if (isClicked)
+        {
+            isClicked = false;
+            _descripcionTabla = "Clientes";
+        }
+        else
+        {
+            isClicked = true;
+            _descripcionTabla = "Consultores";
+        }
+        StateHasChanged();
+    }
+
+    //-------------------------------------------------------------
+    //Aquí se gestiona la selección de las listas
+    //-------------------------------------------------------------
+    private void HandleSelection(Info_Usuario colaborador, int validador)
+    {
+        isRelatorio = false;
+        isGrafico = false;
+        isPizza = false;
+        if (validador == 0)
+        {
+            tempConsultores.Add(colaborador);
+            _Consultores.Remove(colaborador);
+        }
+        else
+        {
+            _Consultores.Add(colaborador);
+            tempConsultores.Remove(colaborador);
+        }
+        _Consultores.Sort((x, y) => x.Usuario_no.CompareTo(y.Usuario_no));
+        tempConsultores.Sort((x, y) => x.Usuario_no.CompareTo(y.Usuario_no));
+        StateHasChanged();
+    }
+
+    //-------------------------------------------------------------
+    //Aquí se gestiona la selección de los botones
+    //-------------------------------------------------------------
+    protected async Task HandleBtnSeleccion(int ident)
+    {
+        identificador = ident;
+        isLoading = true;
+        await Task.Run(CargarData);
+        isLoading = false;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async void CargarData()
+    {
+        try
+        {
+            isRelatorio = false;
+            isGrafico = false;
+            isPizza = false;
+            bool validar_fechas = _fc.DatesCompare(_PeriodoInicio.D_year, _PeriodoInicio.D_mes, _PeriodoFin.D_year, _PeriodoFin.D_mes);
+            if (validar_fechas == false)
+            {
+                string exceptionerror = "La fecha de inicio no puede ser superior a la fecha de fin.";
+                toastService.ShowToast(exceptionerror, ToastLevel.Error);
+            }
+            else
+            {
+                data_Usuarios = new();
+                data_Usuarios = await _fc.GetInfoMonetaria(tempConsultores, _PeriodoInicio, _PeriodoFin);
+                var lowerBound = 0;
+                var upperBound = 255;
+
+                switch (identificador)
+                {
+                    case 0:
+                        isRelatorio = true;
+                        break;
+
+                    case 1:
+                        //-------------------------------------------------------------
+                        //Aquí se va a generar y organizar la data para el grafico
+                        // tipo barras
+                        //-------------------------------------------------------------
+
+                        Tuple<List<Data_Usuario>, List<string>, string, float> resultado = _fc.GetDataForGraph(data_Usuarios);
+                        List<Data_Usuario> temp_data_Usuarios = resultado.Item1;
+                        List<string> X_labels = resultado.Item2;
+                        string titulo = resultado.Item3;
+                        float PromedioSalarioBruto = resultado.Item4;
+                        int k = 0;
+
+                        _configBar = new BarConfig
+                            {
+                                Options = new BarOptions
+                                {
+                                    Responsive = true,
+                                    Legend = new Legend
+                                    {
+                                        Position = Position.Top
+                                    },
+                                    Title = new OptionsTitle
+                                    {
+                                        Display = true,
+                                        FontSize = 20,
+                                        Text = titulo
+                                    },
+                                    Scales = new BarScales
+                                    {
+                                        XAxes = new List<CartesianAxis>
+                                {
+                                    new CategoryAxis
+                                    {
+                                        ScaleLabel = new ScaleLabel{
+                                            Display = true,
+                                            FontColor =  ColorUtil.ColorHexString(255, 99, 132),
+                                            FontSize = 18,
+                                            LabelString = "Meses"
+                                        }
+                                    }
+                                },
+                                        YAxes = new List<CartesianAxis>
+                                {
+                                    new LinearCartesianAxis
+                                    {
+                                        ScaleLabel = new ScaleLabel
+                                        {
+                                            Display = true,
+                                            FontColor =  ColorUtil.ColorHexString(255, 99, 132),
+                                            FontSize = 18,
+                                            LabelString = "R$ (Reales)"
+                                        }
+                                    }
+                                }
+                                    }
+                                }
+                            };
+
+                        IDataset<int> dataset1 = new BarDataset<int>(false)
+                            {
+                                Label = "",
+                                BackgroundColor = ColorUtil.ColorString(255, 0, 0, 0)
+                            };
+
+                        _configBar.Data.Datasets.Add(dataset1);
+
+                        var lineSet = new LineDataset<ChartJs.Blazor.Common.Point>
+                            {
+                                Label = "Custo Fixo Médio",
+                                BackgroundColor = ColorUtil.FromDrawingColor(Color.DimGray),
+                                BorderColor = ColorUtil.FromDrawingColor(Color.DimGray),
+                                BorderCapStyle = BorderCapStyle.Square,
+                                BorderJoinStyle = BorderJoinStyle.Bevel,
+                                Fill = false,
+                                PointBackgroundColor = ColorUtil.FromDrawingColor(Color.Black),
+                                BorderWidth = 1,
+                                PointBorderWidth = 1,
+                                PointRadius = 3,
+                                SteppedLine = SteppedLine.False
+                            };
+
+                        var listPoints = new List<ChartJs.Blazor.Common.Point>();
+
+                        foreach (var xl in X_labels)
+                        {
+                            _configBar.Data.Labels.Add(xl);
+                            ChartJs.Blazor.Common.Point lineaSalarioBruto = new ChartJs.Blazor.Common.Point(k, PromedioSalarioBruto);
+                            listPoints.Add(lineaSalarioBruto);
+                        }
+
+                        lineSet.AddRange(listPoints);
+
+                        _configBar.Data.Datasets.Add(lineSet);
+
+                        foreach (var consultor in temp_data_Usuarios)
+                        {
+                            int cantidaddemeses = data_Usuarios.Count; //Vino de la lista.Count de los meses de la persona
+                            float[] test = new float[consultor.D_monetario.Count];
+                            int j = 0;
+                            var BarColors = "";
+
+                            foreach (var cdm in consultor.D_monetario)
+                            {
+                                test[j] = cdm.Periodo_Recetaliquida;
+                                byte R = Convert.ToByte(RandomNumberGenerator.GetInt32(lowerBound, upperBound));
+                                byte G = Convert.ToByte(RandomNumberGenerator.GetInt32(lowerBound, upperBound));
+                                byte B = Convert.ToByte(RandomNumberGenerator.GetInt32(lowerBound, upperBound));
+                                
+                                BarColors = ColorUtil.ColorHexString(R, G, B);
+                                j++;
+                            }
+
+                            IDataset<float> dataset2 = new BarDataset<float>(test)
+                                {
+                                    Label = consultor.D_usuario.Usuario_no,
+                                    BackgroundColor = BarColors,
+                                    BorderWidth = 1
+                                };
+                            _configBar.Data.Datasets.Add(dataset2);
+                        }
+                        isGrafico = true;
+                        break;
+
+                    case 2:
+                        //-------------------------------------------------------------
+                        //Aquí se va a generar y organizar la data para el grafico
+                        // tipo pie o pizza
+                        //-------------------------------------------------------------
+
+                        Tuple<List<Info_Pie>, float> data_Pie = _fc.GetDataForPie(data_Usuarios);
+                        List<Info_Pie> info_pie = data_Pie.Item1;
+                        float total_receta = data_Pie.Item2;
+                        float[] pie_trozos = new float[info_pie.Count];
+                        int i = 0;
+
+                        _configPie = new PieConfig
+                            {
+                                Options = new PieOptions
+                                {
+                                    Responsive = true,
+                                    Title = new OptionsTitle
+                                    {
+                                        Display = true,
+                                        FontSize = 20,
+                                        Text = "Participacao na Receita liquida"
+                                    }
+                                }
+                            };
+
+                        foreach (var ip in info_pie)
+                        {
+                            _configPie.Data.Labels.Add(ip.Pie_Nombre);
+                            pie_trozos[i] = (ip.Pie_Receta / total_receta) * 100;
+                            i++;
+                        }
+
+                        var PieColors = new string[info_pie.Count];
+
+                        for (int j = 0; j < info_pie.Count; j++)
+                        {
+                            byte R = Convert.ToByte(RandomNumberGenerator.GetInt32(lowerBound, upperBound));
+                            byte G = Convert.ToByte(RandomNumberGenerator.GetInt32(lowerBound, upperBound));
+                            byte B = Convert.ToByte(RandomNumberGenerator.GetInt32(lowerBound, upperBound));
+
+                            PieColors[j] = ColorUtil.ColorHexString(R, G, B);
+                        }
+
+                        PieDataset<float> dataset = new PieDataset<float>(pie_trozos)
+                            {
+                                BackgroundColor = PieColors
+                            };
+                        _configPie.Data.Datasets.Add(dataset);
+                        isPizza = true;
+                        break;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            string exceptionerror = "Se produjo un error <br/>Error: " + ex.Message;
+            toastService.ShowToast(exceptionerror, ToastLevel.Error);
+            throw;
+        }
+    }
+
+    //-------------------------------------------------------------
+    //Aquí se gestiona la lógica de los periodos seleccionados
+    //-------------------------------------------------------------
+    private void HandleMesInicio(ChangeEventArgs e)
+    {
+        isRelatorio = false;
+        isGrafico = false;
+        isPizza = false;
+        if (e.Value != null)
+        {
+            string mes = (string)e.Value;
+            _PeriodoInicio.D_mes = Convert.ToInt32(mes);
+        }
+        StateHasChanged();
+    }
+    private void HandleMesFin(ChangeEventArgs e)
+    {
+        isRelatorio = false;
+        isGrafico = false;
+        isPizza = false;
+        if (e.Value != null)
+        {
+            string mes = (string)e.Value;
+            _PeriodoFin.D_mes = Convert.ToInt32(mes);
+        }
+        StateHasChanged();
+    }
+
+    private void HandleYearInicio(ChangeEventArgs e)
+    {
+        isRelatorio = false;
+        isGrafico = false;
+        isPizza = false;
+        if (e.Value != null)
+        {
+            string year = (string)e.Value;
+            _PeriodoInicio.D_year = Convert.ToInt32(year);
+        }
+        StateHasChanged();
+    }
+    private void HandleYearFin(ChangeEventArgs e)
+    {
+        isRelatorio = false;
+        isGrafico = false;
+        isPizza = false;
+        if (e.Value != null)
+        {
+            string year = (string)e.Value;
+            _PeriodoFin.D_year = Convert.ToInt32(year);
+        }
+
+        StateHasChanged();
+    }
+    //-------------------------------------------------------------
+    //Aquí declaramos las listas que se generarán cuando se
+    // utilicen los buscadores
+    //-------------------------------------------------------------
+    private List<Info_Usuario> FiltradoConsultores => _Consultores.Where(i => i.Usuario_no.ToLower().Contains(SearchTerm.ToLower())).ToList();
+
+    private List<Info_Usuario> FiltradotempConsultores => tempConsultores.Where(i => i.Usuario_no.ToLower().Contains(SearchTerm2.ToLower())).ToList();
+}
